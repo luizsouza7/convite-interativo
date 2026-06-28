@@ -1,0 +1,234 @@
+.card {
+  position: relative;
+  width: min(760px, 94%);
+  margin: clamp(22px, 4vw, 56px) auto;
+  padding: 0 clamp(20px, 5vw, 56px) 34px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: clamp(28px, 6vw, 42px);
+  background:
+    radial-gradient(circle at 50% 6%, rgba(255, 255, 255, 0.9), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(246, 252, 255, 0.7)),
+    rgba(255, 255, 255, 0.64);
+  backdrop-filter: blur(22px);
+  box-shadow:
+    0 34px 90px rgba(56, 111, 154, 0.24),
+    0 12px 34px rgba(35, 77, 113, 0.14),
+    inset 0 2px 10px rgba(255, 255, 255, 0.45),
+    inset 0 -18px 48px rgba(76, 139, 187, 0.08);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: clamp(14px, 2.4vw, 18px);
+  z-index: 2;
+  border: 1px solid rgba(105, 167, 215, 0.24);
+  border-radius: clamp(20px, 5vw, 32px);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.28),
+    inset 0 18px 42px rgba(92, 151, 197, 0.06);
+  pointer-events: none;
+}
+
+.divider {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(360px, 78%);
+  margin: clamp(12px, 3vw, 18px) auto;
+  color: rgba(92, 151, 197, 0.52);
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  display: block;
+  height: 1px;
+  flex: 1;
+  min-width: 34px;
+  max-width: 160px;
+  border-radius: 999px;
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.divider::before {
+  margin-right: 12px;
+  background: linear-gradient(90deg, transparent, rgba(92, 151, 197, 0.46));
+}
+
+.divider::after {
+  margin-left: 12px;
+  background: linear-gradient(90deg, rgba(92, 151, 197, 0.46), transparent);
+}
+
+.divider span {
+  display: inline-grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border: 1px solid rgba(105, 167, 215, 0.16);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.34);
+  color: rgba(80, 137, 181, 0.58);
+  font-size: 0.82rem;
+  box-shadow: 0 8px 18px rgba(92, 151, 197, 0.08);
+}
+
+.leftFlowers,
+.rightFlowers {
+  position: absolute;
+  bottom: -12px;
+  width: clamp(124px, 27vw, 230px);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.88;
+}
+
+.leftFlowers {
+  left: -30px;
+}
+
+.rightFlowers {
+  right: -30px;
+}
+
+.bottomOrnament {
+  position: relative;
+  z-index: 3;
+  width: clamp(150px, 32vw, 230px);
+  margin: 8px auto 2px;
+  opacity: 0.62;
+  pointer-events: none;
+  filter: drop-shadow(0 14px 22px rgba(67, 123, 166, 0.1));
+}
+
+.decorButterfly {
+  position: absolute;
+  z-index: 2;
+  width: 54px;
+  opacity: 0.78;
+  pointer-events: none;
+  animation: decorFloat 8s ease-in-out infinite;
+  filter: drop-shadow(0 10px 14px rgba(45, 92, 128, 0.14));
+}
+
+.butterflyOne {
+  top: 245px;
+  left: clamp(22px, 7vw, 58px);
+  width: 42px;
+  transform: rotate(-10deg);
+}
+
+.butterflyTwo {
+  top: 150px;
+  right: clamp(28px, 8vw, 72px);
+  width: 38px;
+  opacity: 0.72;
+  animation-delay: 1.3s;
+}
+
+.butterflyThree {
+  top: 45%;
+  right: clamp(18px, 6vw, 50px);
+  width: 58px;
+  opacity: 0.68;
+  animation-duration: 9.5s;
+  animation-delay: 0.7s;
+}
+
+.butterflyFour {
+  top: 61%;
+  left: clamp(18px, 5vw, 44px);
+  width: 44px;
+  opacity: 0.66;
+  animation-duration: 7.5s;
+  animation-delay: 2s;
+}
+
+.butterflyFive {
+  right: clamp(28px, 7vw, 64px);
+  bottom: 285px;
+  width: 40px;
+  opacity: 0.58;
+  animation-duration: 8.8s;
+  animation-delay: 2.8s;
+}
+
+@keyframes decorFloat {
+  0%,
+  100% {
+    translate: 0 0;
+    rotate: -3deg;
+  }
+
+  50% {
+    translate: 0 -10px;
+    rotate: 5deg;
+  }
+}
+
+@media (max-width: 520px) {
+  .card {
+    width: min(760px, 94%);
+    padding-inline: clamp(18px, 5vw, 24px);
+    padding-bottom: 26px;
+  }
+
+  .divider {
+    width: min(300px, 76%);
+    margin-block: 12px;
+  }
+
+  .leftFlowers,
+  .rightFlowers {
+    bottom: -6px;
+    opacity: 0.68;
+  }
+
+  .leftFlowers {
+    left: -42px;
+  }
+
+  .rightFlowers {
+    right: -42px;
+  }
+
+  .bottomOrnament {
+    width: clamp(128px, 42vw, 170px);
+    margin-top: 4px;
+    opacity: 0.56;
+  }
+
+  .decorButterfly {
+    width: 34px;
+    opacity: 0.64;
+  }
+
+  .butterflyOne {
+    top: 258px;
+    left: 20px;
+    width: 32px;
+  }
+
+  .butterflyTwo,
+  .butterflyFour {
+    display: none;
+  }
+
+  .butterflyThree {
+    top: 43%;
+    right: 10px;
+    width: 36px;
+    opacity: 0.52;
+  }
+
+  .butterflyFive {
+    display: none;
+  }
+}

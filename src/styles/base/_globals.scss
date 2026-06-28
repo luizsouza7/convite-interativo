@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+
+body{
+
+    min-height:100vh;
+
+    background:url("../assets/background.jpg") center/cover no-repeat;
+
+    color:$text;
+
+    overflow-x:hidden;
+
+}
+
+#root{
+
+    width:100%;
+
+}

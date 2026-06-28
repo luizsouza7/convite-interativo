@@ -1,0 +1,104 @@
+.event {
+  position: relative;
+  z-index: 3;
+  padding: 12px 0 10px;
+  text-align: center;
+}
+
+.weekday {
+  display: block;
+  margin-bottom: 12px;
+  color: #4d7695;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.88rem, 2.5vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.44em;
+}
+
+.day {
+  margin: 0;
+  color: #447faa;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(7.25rem, 22vw, 10rem);
+  font-weight: 700;
+  line-height: 0.76;
+  letter-spacing: -0.025em;
+  text-shadow:
+    0 12px 28px rgba(255, 255, 255, 0.88),
+    0 18px 34px rgba(55, 117, 164, 0.16);
+}
+
+.month {
+  display: block;
+  margin-top: 20px;
+  color: #476f8d;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.08rem, 3vw, 1.24rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+}
+
+.hour {
+  margin: 18px 0 24px;
+  color: #386f9b;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.35rem, 6.2vw, 3.08rem);
+  font-weight: 700;
+  letter-spacing: 0.035em;
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  max-width: min(460px, 94%);
+  padding: 12px 18px;
+  border: 1px solid rgba(116, 176, 220, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.28);
+  color: #52708a;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.54);
+  backdrop-filter: blur(8px);
+}
+
+.location svg {
+  flex: 0 0 auto;
+  color: #6caddf;
+  font-size: 25px;
+}
+
+.location div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  text-align: left;
+}
+
+.location strong {
+  color: #345f7d;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.48rem, 4.5vw, 1.86rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.location span {
+  color: #4f6d84;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.08rem, 3vw, 1.2rem);
+  font-weight: 500;
+}
+
+@media (max-width: 420px) {
+  .event {
+    padding-block: 8px;
+  }
+
+  .location {
+    gap: 10px;
+    padding: 11px 14px;
+    border-radius: 24px;
+  }
+}
