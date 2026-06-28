@@ -11,9 +11,8 @@ import {
 
 export default function ActionButtons() {
   const [showGifts, setShowGifts] = useState(false);
-  const message =
-    "Olá! Confirmo minha presença no evento da Mari Alces no dia 22/08/2026 às 12:30.";
-  const whatsappUrl = `https://wa.me/${invitation.whatsapp}?text=${encodeURIComponent(message)}`;
+  const whatsappText = encodeURIComponent(invitation.whatsapp.message);
+  const whatsappLink = `https://wa.me/${invitation.whatsapp.number}?text=${whatsappText}`;
 
   return (
     <section className={styles.actions}>
@@ -26,7 +25,7 @@ export default function ActionButtons() {
         </a>
 
         <a
-          href={whatsappUrl}
+          href={whatsappLink}
           className={styles.button}
           target="_blank"
           rel="noreferrer"
