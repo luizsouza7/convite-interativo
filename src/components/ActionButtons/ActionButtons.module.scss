@@ -81,19 +81,6 @@
   animation: softPulse 3.4s ease-in-out infinite;
 }
 
-.gifts {
-  width: min(420px, 92%);
-  margin: 12px auto 0;
-  padding: 15px 18px;
-  border: 1px solid rgba(119, 175, 217, 0.24);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.34);
-  color: #506b82;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  backdrop-filter: blur(10px);
-}
-
 @keyframes softPulse {
   0%,
   100% {

@@ -1,0 +1,169 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: clamp(18px, 5vw, 36px);
+  background:
+    radial-gradient(circle at top, rgba(222, 242, 255, 0.38), transparent 42%),
+    rgba(42, 70, 92, 0.42);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.24s ease both;
+}
+
+.card {
+  position: relative;
+  width: min(520px, 90vw);
+  max-height: min(86vh, 720px);
+  overflow: auto;
+  padding: clamp(28px, 6vw, 42px) clamp(20px, 5vw, 36px) clamp(24px, 5vw, 34px);
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 26px 70px rgba(55, 95, 128, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  color: #526e86;
+  text-align: center;
+  animation: cardIn 0.32s ease both;
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(108, 163, 205, 0.22);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.78);
+  color: #5c8db6;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.closeButton:hover,
+.closeButton:focus-visible {
+  background: rgba(232, 247, 255, 0.96);
+  color: #3f7caf;
+  transform: scale(1.05);
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid rgba(93, 149, 192, 0.5);
+  outline-offset: 3px;
+}
+
+.icon {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(237, 248, 255, 0.98), rgba(197, 229, 250, 0.9));
+  box-shadow: 0 16px 34px rgba(92, 141, 182, 0.22);
+  color: #5c8db6;
+  font-size: 1.55rem;
+}
+
+.card h2 {
+  margin: 0;
+  color: #4b6480;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.75rem, 7vw, 2.45rem);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.subtitle {
+  width: min(390px, 100%);
+  margin: 10px auto 22px;
+  color: rgba(82, 110, 134, 0.88);
+  font-size: clamp(0.98rem, 3.5vw, 1.08rem);
+  line-height: 1.55;
+}
+
+.giftList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.giftList li {
+  display: grid;
+  min-height: 58px;
+  place-items: center;
+  padding: 12px 14px;
+  border: 1px solid rgba(118, 184, 232, 0.22);
+  border-radius: 18px;
+  background: rgba(237, 248, 255, 0.74);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86);
+  color: #4f7797;
+  font-size: clamp(0.9rem, 3vw, 0.98rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.footer {
+  margin: 22px auto 0;
+  color: #5c8db6;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.08rem, 4vw, 1.28rem);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 520px) {
+  .overlay {
+    align-items: center;
+    padding: 18px;
+  }
+
+  .card {
+    width: min(90vw, 420px);
+    max-height: 88vh;
+    border-radius: 26px;
+  }
+
+  .giftList {
+    grid-template-columns: 1fr;
+  }
+
+  .giftList li {
+    min-height: 48px;
+  }
+}

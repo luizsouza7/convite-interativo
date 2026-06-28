@@ -20,6 +20,16 @@ const invitation = {
   whatsapp: "5524999179921",
   mapsUrl: "https://maps.app.goo.gl/EFAnucwaGCXrByBK6?g_st=ic",
   giftText: "A lista de presentes será disponibilizada em breve.",
+  gifts: [
+    "Perfumes ou body splash",
+    "Maquiagem ou skincare",
+    "Acessórios delicados",
+    "Bolsas ou carteiras",
+    "Roupas ou looks casuais",
+    "Itens de decoração",
+    "Vale-presente",
+    "Sua presença já é um presente especial",
+  ],
 };
 
 export default invitation;

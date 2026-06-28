@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./ActionButtons.module.scss";
 import invitation from "../../data/invitation";
+import GiftModal from "../GiftModal/GiftModal";
 
 import {
   FaMapMarkerAlt,
@@ -40,8 +41,9 @@ export default function ActionButtons() {
         <button
           type="button"
           className={styles.button}
-          onClick={() => setShowGifts((current) => !current)}
+          onClick={() => setShowGifts(true)}
           aria-expanded={showGifts}
+          aria-haspopup="dialog"
         >
           <div className={styles.icon}>
             <FaGift />
@@ -53,9 +55,10 @@ export default function ActionButtons() {
       <p className={styles.hint}>✦ Clique nos ícones para interagir ✦</p>
 
       {showGifts && (
-        <div className={styles.gifts}>
-          {invitation.giftText}
-        </div>
+        <GiftModal
+          gifts={invitation.gifts}
+          onClose={() => setShowGifts(false)}
+        />
       )}
     </section>
   );
