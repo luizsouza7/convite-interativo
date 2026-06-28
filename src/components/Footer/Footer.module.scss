@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   z-index: 3;
-  padding: 2px 0 112px;
+  padding: 0 0 118px;
   text-align: center;
 }
 
@@ -18,6 +18,6 @@
 
 @media (max-width: 520px) {
   .footer {
-    padding-bottom: 84px;
+    padding-bottom: 92px;
   }
 }

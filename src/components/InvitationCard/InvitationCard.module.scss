@@ -98,29 +98,34 @@
 .leftFlowers,
 .rightFlowers {
   position: absolute;
-  bottom: -12px;
-  width: clamp(124px, 27vw, 230px);
+  bottom: 18px;
+  width: clamp(134px, 29vw, 246px);
   pointer-events: none;
   z-index: 1;
   opacity: 0.82;
 }
 
 .leftFlowers {
-  left: -30px;
+  left: -24px;
 }
 
 .rightFlowers {
-  right: -30px;
+  right: -24px;
 }
 
 .bottomOrnament {
   position: relative;
   z-index: 3;
-  width: clamp(150px, 32vw, 230px);
-  margin: 8px auto 2px;
+  width: clamp(162px, 34vw, 246px);
+  margin: 2px auto -6px;
   opacity: 0.62;
   pointer-events: none;
   filter: drop-shadow(0 14px 22px rgba(67, 123, 166, 0.1));
+}
+
+.bottomOrnament + .divider {
+  margin-top: clamp(6px, 1.6vw, 10px);
+  margin-bottom: clamp(10px, 2vw, 16px);
 }
 
 .decorButterfly {
@@ -202,22 +207,29 @@
 
   .leftFlowers,
   .rightFlowers {
-    bottom: -6px;
+    bottom: 12px;
+    width: clamp(136px, 43vw, 180px);
     opacity: 0.68;
   }
 
   .leftFlowers {
-    left: -42px;
+    left: -30px;
   }
 
   .rightFlowers {
-    right: -42px;
+    right: -30px;
   }
 
   .bottomOrnament {
-    width: clamp(128px, 42vw, 170px);
-    margin-top: 4px;
+    width: clamp(142px, 44vw, 182px);
+    margin-top: 0;
+    margin-bottom: -8px;
     opacity: 0.56;
+  }
+
+  .bottomOrnament + .divider {
+    margin-top: 6px;
+    margin-bottom: 12px;
   }
 
   .decorButterfly {

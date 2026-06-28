@@ -8,10 +8,10 @@
 
 .topFlowers {
   position: absolute;
-  top: clamp(-126px, -10vw, -74px);
+  top: clamp(-92px, -7vw, -44px);
   left: 50%;
   z-index: 1;
-  width: clamp(390px, 82vw, 690px);
+  width: clamp(420px, 86vw, 735px);
   max-width: none;
   transform: translateX(-50%);
   opacity: 0.92;
@@ -113,8 +113,8 @@
   }
 
   .topFlowers {
-    top: -78px;
-    width: 404px;
+    top: -48px;
+    width: 430px;
     opacity: 0.82;
   }
 
