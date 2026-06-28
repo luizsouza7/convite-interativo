@@ -1,7 +1,7 @@
 .actions {
   position: relative;
   z-index: 3;
-  padding: 4px 0 8px;
+  padding: 6px 0 8px;
   text-align: center;
 }
 
@@ -26,13 +26,17 @@
   font-family: "Montserrat", sans-serif;
   text-align: center;
   text-decoration: none;
-  transition: transform 0.28s ease, color 0.28s ease;
+  transition:
+    color 0.28s ease,
+    filter 0.28s ease,
+    transform 0.28s ease;
 }
 
 .button:hover,
 .button:focus-visible {
-  color: #3f7caf;
-  transform: translateY(-5px);
+  color: #3475a5;
+  filter: drop-shadow(0 12px 18px rgba(63, 124, 175, 0.13));
+  transform: translateY(-6px);
 }
 
 .button:focus-visible {
@@ -48,22 +52,32 @@
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.54);
+  background:
+    radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 0.96), transparent 34%),
+    rgba(255, 255, 255, 0.56);
   box-shadow:
     0 18px 36px rgba(78, 132, 174, 0.16),
     inset 0 1px 0 rgba(255, 255, 255, 0.84);
   backdrop-filter: blur(12px);
   font-size: clamp(1.5rem, 5vw, 1.9rem);
-  transition: box-shadow 0.28s ease, transform 0.28s ease, background 0.28s ease;
+  transition:
+    background 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    transform 0.28s ease;
 }
 
 .button:hover .icon,
 .button:focus-visible .icon {
-  background: rgba(255, 255, 255, 0.74);
+  border-color: rgba(255, 255, 255, 0.92);
+  background:
+    radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 1), transparent 38%),
+    rgba(237, 248, 255, 0.82);
   box-shadow:
-    0 22px 44px rgba(68, 124, 169, 0.24),
+    0 24px 48px rgba(68, 124, 169, 0.24),
+    0 0 0 7px rgba(237, 248, 255, 0.26),
     inset 0 1px 0 rgba(255, 255, 255, 0.96);
-  transform: scale(1.04);
+  transform: scale(1.045);
 }
 
 .button span {
@@ -73,11 +87,12 @@
 }
 
 .hint {
-  margin: 4px auto 0;
-  color: rgba(69, 103, 130, 0.86);
-  font-size: clamp(0.9rem, 2.6vw, 1rem);
+  width: min(410px, 92%);
+  margin: 6px auto 0;
+  color: rgba(69, 103, 130, 0.72);
+  font-size: clamp(0.84rem, 2.6vw, 0.96rem);
   font-style: italic;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   animation: softPulse 3.4s ease-in-out infinite;
 }
 
@@ -94,11 +109,21 @@
 
 @media (max-width: 420px) {
   .buttons {
-    gap: 12px;
+    gap: 10px;
   }
 
   .button {
-    width: 86px;
-    min-height: 108px;
+    width: 88px;
+    min-height: 106px;
+  }
+
+  .icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .hint {
+    margin-top: 4px;
+    letter-spacing: 0.03em;
   }
 }

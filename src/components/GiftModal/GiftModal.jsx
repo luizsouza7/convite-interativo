@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { FaGift, FaTimes } from "react-icons/fa";
 import styles from "./GiftModal.module.scss";
 
@@ -23,7 +24,7 @@ export default function GiftModal({ gifts = [], onClose }) {
     }
   };
 
-  return (
+  return createPortal(
     <div
       className={styles.overlay}
       role="presentation"
@@ -63,6 +64,7 @@ export default function GiftModal({ gifts = [], onClose }) {
           O mais importante será celebrar esse momento com você.
         </p>
       </article>
-    </div>
+    </div>,
+    document.body,
   );
 }
