@@ -98,7 +98,7 @@
 .leftFlowers,
 .rightFlowers {
   position: absolute;
-  bottom: -26px;
+  bottom: -34px;
   width: clamp(134px, 29vw, 246px);
   pointer-events: none;
   z-index: 3;
@@ -106,11 +106,11 @@
 }
 
 .leftFlowers {
-  left: -26px;
+  left: -30px;
 }
 
 .rightFlowers {
-  right: -26px;
+  right: -30px;
 }
 
 .bottomOrnament {
@@ -207,17 +207,17 @@
 
   .leftFlowers,
   .rightFlowers {
-    bottom: -24px;
+    bottom: -30px;
     width: clamp(136px, 43vw, 180px);
     opacity: 0.68;
   }
 
   .leftFlowers {
-    left: -32px;
+    left: -34px;
   }
 
   .rightFlowers {
-    right: -32px;
+    right: -34px;
   }
 
   .bottomOrnament {
